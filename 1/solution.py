@@ -4,4 +4,4 @@ for i in range(1000):
         sum += i
     elif i % 5 == 0:
         sum += i
-console.log(sum)
+print(sum)
