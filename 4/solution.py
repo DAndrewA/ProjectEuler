@@ -5,14 +5,19 @@ def isPalindrome(string):
         return False
 
 number1 = 999
-palindromeFound = False
-while palindromeFound == False:
+palindrome = 0
+while number1 > 99:
     number2 = 999
-    while palindromeFound == False and number2 > 0:
+    while number2 > 99:
         product = number1 * number2
         productString = str(product)
         if isPalindrome(productString):
-            palindromeFound = True
-            print(product)
+            if product > palindrome:
+                palindrome = product
+                print("New largest palindrome: " + str(palindrome))
+            print("SUCCESFUL PRODUCT: " + productString)
+            print(number1,number2)
         number2 = number2 - 1
     number1 = number1 - 1
+
+print(palindrome)
