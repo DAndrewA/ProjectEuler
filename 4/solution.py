@@ -4,6 +4,7 @@ def isPalindrome(string):
     else:
         return False
 
+'''
 number1 = 999
 palindrome = 0
 while number1 > 99:
@@ -21,3 +22,13 @@ while number1 > 99:
     number1 = number1 - 1
 
 print(palindrome)
+'''
+highestPalindrome = 0
+# change start value of x to limit number of calculations
+for x in range(800,1000):
+    for y in range(100,1000):
+        xy = x*y
+        if isPalindrome(str(xy)):
+            if xy > highestPalindrome:
+                highestPalindrome = xy
+print(highestPalindrome)
